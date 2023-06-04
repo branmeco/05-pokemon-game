@@ -1,7 +1,7 @@
 <template>
   <h1>¿Quien es este pokemon?</h1>
   <!--TODO: img-->
-  <pokemonPicture />
+  <pokemonPicture v-bind:pokemonId="64" :showPokemon="true" />
 
   <!--TODO: options-->
   <pokemonOptions />
