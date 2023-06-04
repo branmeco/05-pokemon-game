@@ -4,17 +4,17 @@
   <pokemonPicture />
 
   <!--TODO: options-->
-  <pokemonOption />
+  <pokemonOptions />
 </template>
 
 <script>
 import PokemonPicture from "@/components/PokemonPicture.vue";
-import PokemonOption from "@/components/PoekemonOption.vue";
+import PokemonOptions from "@/components/PokemonOptions.vue";
 
 export default {
   components: {
     PokemonPicture,
-    PokemonOption,
+    PokemonOptions,
   },
 };
 </script>
