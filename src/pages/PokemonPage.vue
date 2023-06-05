@@ -4,7 +4,7 @@
   <pokemonPicture :pokemonId="64" :showPokemon="true" />
 
   <!--TODO: options-->
-  <pokemonOptions />
+  <pokemonOptions :pokemons="pokemonArr"/>
 </template>
 
 <script>
@@ -13,12 +13,23 @@ import PokemonOptions from "@/components/PokemonOptions.vue";
 
 import getPokemonOptions from '../helpers/getPokemonOptions'
 
-// console.log(getPokemonOptions())
-
 export default {
   components: {
     PokemonPicture,
     PokemonOptions,
   },
+  data() {
+    return {
+      pokemonArr: []
+    }
+  },
+  methods: {
+    async mixPokemonArr(){
+      this.pokemonArr = await getPokemonOptions()
+    }
+  },
+  mounted() {
+    this.mixPokemonArr()
+  }
 };
 </script>
