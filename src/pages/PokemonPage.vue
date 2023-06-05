@@ -1,7 +1,7 @@
 <template>
   <h1>¿Quien es este pokemon?</h1>
   <!--TODO: img-->
-  <pokemonPicture v-bind:pokemonId="64" :showPokemon="true" />
+  <pokemonPicture :pokemonId="64" :showPokemon="true" />
 
   <!--TODO: options-->
   <pokemonOptions />
@@ -13,7 +13,7 @@ import PokemonOptions from "@/components/PokemonOptions.vue";
 
 import getPokemonOptions from '../helpers/getPokemonOptions'
 
-console.log(getPokemonOptions())
+// console.log(getPokemonOptions())
 
 export default {
   components: {
